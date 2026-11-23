@@ -1,0 +1,25 @@
+"""
+src/custom_metric.py - Optional Pluggable Competition Metric Hook
+Rename this file to src/custom_metric.py and implement compute_custom_metric()
+when a competition uses a custom evaluation metric (e.g., AW-MAE, QWK, etc.).
+Set metric_name: "custom" in configs/competition.yaml and configs/meta.json.
+"""
+from typing import Optional
+import numpy as np
+import pandas as pd
+
+HIGHER_IS_BETTER = True
+
+
+def compute_custom_metric(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    df_context: Optional[pd.DataFrame] = None
+) -> float:
+    raise NotImplementedError("Implement competition-specific metric here.")
+
+
+# Optional hooks for pair-preserving bootstrap & paired multi-target post-processing:
+# def compute_per_match_loss(y_true: np.ndarray, y_pred: np.ndarray, df_context: Optional[pd.DataFrame] = None) -> np.ndarray: ...
+# def get_match_weights(df_context: Optional[pd.DataFrame]) -> Optional[np.ndarray]: ...
+# def decode_paired_goals(y_pred: np.ndarray) -> np.ndarray: ...

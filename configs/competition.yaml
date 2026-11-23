@@ -1,0 +1,33 @@
+competition_name: datavidia-11-0
+modality: tabular
+task_type: multiclass_classification
+target_column: status_penanganan
+target_columns:
+- status_penanganan
+id_column: shipment_id
+is_paired_entities: false
+metric_name: f1_macro
+higher_is_better: true
+metric_formula_needs_verification: false
+num_classes: 7
+cv_strategy: stratified
+time_column: null
+group_column: customer_id
+drifting_features_warning:
+- customer_id
+- courier_id
+- hub_id
+- package_id
+- promo_id
+- cour_hub_id
+demographic_shift_warnings: []
+postprocess_round_int: false
+seed: 42
+n_splits: 5
+paths:
+  train: data/raw/train.csv
+  test: data/raw/test.csv
+  sample_submission: data/raw/sample_submission.csv
+  cv_splits: data/processed/cv_splits.json
+  data_profile: configs/data_profile.json
+  submissions_dir: submissions

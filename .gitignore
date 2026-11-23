@@ -1,0 +1,26 @@
+# Data & large artifacts
+data/raw/
+data/processed/*.json
+data/processed/*.parquet
+data/processed/*.csv
+data/processed/*.npy
+
+# Experiment binary outputs & active SQLite DB
+experiments/**/*.npy
+experiments/**/*.pkl
+experiments/**/*.joblib
+experiments/**/*.model
+experiments/**/*.bin
+experiments/registry.db*
+
+# Submissions (large CSVs)
+submissions/*.csv
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
