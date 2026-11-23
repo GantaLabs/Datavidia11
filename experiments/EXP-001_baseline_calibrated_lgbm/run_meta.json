@@ -1,39 +1,39 @@
 {
-  "cv_mean": 0.5699888270087513,
-  "cv_std": 0.0015150142375750788,
-  "train_mean": 0.6257255795194696,
+  "cv_mean": 0.5642971014140646,
+  "cv_std": 0.0007974944645610044,
+  "train_mean": 0.5698525141897874,
   "fold_scores": [
-    0.5677274883039346,
-    0.5688979446754697,
-    0.5720396298873681,
-    0.5703945599289874,
-    0.5708845122479965
+    0.5635413018313086,
+    0.5643597381504107,
+    0.5653969210881982,
+    0.5632836672874668,
+    0.5649038787129385
   ],
   "used_full_train_refit": false,
-  "overall_oof_f1_macro": 0.5699926876412679,
-  "overall_oof_multi_logloss": 0.869933776948909,
+  "overall_oof_f1_macro": 0.5643066962192231,
+  "overall_oof_multi_logloss": 0.8818460087356721,
   "fold_logloss": [
-    0.8722985384751912,
-    0.8698343816889811,
-    0.8702158374790497,
-    0.870447611854612,
-    0.8668725061387222
+    0.8822595369244884,
+    0.8798743474996541,
+    0.8852159885094313,
+    0.8818138603480421,
+    0.8800663166612757
   ],
   "per_class_f1": {
-    "gagal_antar_awal": 0.40032685048911504,
-    "klaim_hilang": 0.4565197329970162,
-    "konfirmasi_alamat": 0.6980220465300802,
-    "normal": 0.8045485450568967,
-    "retur_pengirim": 0.47779600979319686,
-    "rusak_perjalanan": 0.4202318349958635,
-    "tertunda_operasional": 0.7325037936267071
+    "gagal_antar_awal": 0.39795029464514475,
+    "klaim_hilang": 0.44647935743975997,
+    "konfirmasi_alamat": 0.6979058677171884,
+    "normal": 0.7999830387967801,
+    "retur_pengirim": 0.4685482358614408,
+    "rusak_perjalanan": 0.4138366223038091,
+    "tertunda_operasional": 0.7254434567704389
   },
   "best_iterations": [
-    345,
-    336,
-    303,
-    352,
-    351
+    55,
+    55,
+    55,
+    55,
+    55
   ],
   "classes": [
     "gagal_antar_awal",
@@ -45,106 +45,107 @@
     "tertunda_operasional"
   ],
   "n_features": 226,
+  "runtime_seconds": 735.8445003032684,
   "top25_gain_features": [
     {
       "feature": "cust_address_quality",
-      "gain": 2166590.6829166412
-    },
-    {
-      "feature": "te_cour_tertunda_operasional",
-      "gain": 1618593.0683493614
-    },
-    {
-      "feature": "te_cour_normal",
-      "gain": 1371400.5137268067
+      "gain": 269955.15863370895
     },
     {
       "feature": "cust_complaint_index",
-      "gain": 1200886.3095502853
+      "gain": 198574.06012735367
+    },
+    {
+      "feature": "te_cour_normal",
+      "gain": 198485.30008077621
     },
     {
       "feature": "te_cust_konfirmasi_alamat",
-      "gain": 888497.5736948014
+      "gain": 174293.9576792717
+    },
+    {
+      "feature": "te_cour_tertunda_operasional",
+      "gain": 152017.1342564583
     },
     {
       "feature": "te_cour_gagal_antar_awal",
-      "gain": 807392.978063202
+      "gain": 107672.56371679305
     },
     {
       "feature": "cust_credit_score",
-      "gain": 707574.4679566384
+      "gain": 99400.28326253893
     },
     {
       "feature": "te_cust_retur_pengirim",
-      "gain": 561292.9713027955
-    },
-    {
-      "feature": "kota_tujuan",
-      "gain": 432095.6466636658
-    },
-    {
-      "feature": "kota_asal",
-      "gain": 428156.24205007555
-    },
-    {
-      "feature": "declared_value",
-      "gain": 354170.95044507977
-    },
-    {
-      "feature": "scan_quality_mean",
-      "gain": 290793.354364872
-    },
-    {
-      "feature": "te_hub_klaim_hilang",
-      "gain": 252840.06227760317
-    },
-    {
-      "feature": "te_cour_rusak_perjalanan",
-      "gain": 240244.1603773117
-    },
-    {
-      "feature": "ship_month",
-      "gain": 223629.94095859525
+      "gain": 85394.43378477097
     },
     {
       "feature": "te_cust_normal",
-      "gain": 215753.12676620483
+      "gain": 68497.03359241485
     },
     {
-      "feature": "inv_days_to_pay_max",
-      "gain": 184975.44573774337
-    },
-    {
-      "feature": "seg_durasi_sum",
-      "gain": 144740.77821645737
+      "feature": "te_cour_rusak_perjalanan",
+      "gain": 64619.08184833526
     },
     {
       "feature": "te_hub_tertunda_operasional",
-      "gain": 143735.76941928864
+      "gain": 52493.13469924927
     },
     {
-      "feature": "distance_km",
-      "gain": 142296.9231578827
+      "feature": "scan_quality_mean",
+      "gain": 38182.81582326889
     },
     {
-      "feature": "te_cust_gagal_antar_awal",
-      "gain": 132800.9031369209
-    },
-    {
-      "feature": "inv_count",
-      "gain": 109638.96696214676
-    },
-    {
-      "feature": "te_last_hub_tertunda_operasional",
-      "gain": 107575.15573720932
-    },
-    {
-      "feature": "ship_hour",
-      "gain": 83375.18722209931
+      "feature": "declared_value",
+      "gain": 32521.755564022067
     },
     {
       "feature": "cour_courier_score",
-      "gain": 80244.21048908234
+      "gain": 29724.081531429292
+    },
+    {
+      "feature": "te_hub_klaim_hilang",
+      "gain": 27744.280807018284
+    },
+    {
+      "feature": "ship_month",
+      "gain": 23890.869989585877
+    },
+    {
+      "feature": "inv_days_to_pay_max",
+      "gain": 23407.788642215728
+    },
+    {
+      "feature": "te_last_hub_tertunda_operasional",
+      "gain": 21848.540016269682
+    },
+    {
+      "feature": "distance_km",
+      "gain": 20867.86384706497
+    },
+    {
+      "feature": "seg_durasi_sum",
+      "gain": 20622.968496227266
+    },
+    {
+      "feature": "te_hub_normal",
+      "gain": 20593.994680690765
+    },
+    {
+      "feature": "inv_amount_vs_declared_ratio",
+      "gain": 18887.556943607327
+    },
+    {
+      "feature": "jumlah_catatan",
+      "gain": 18561.76281890869
+    },
+    {
+      "feature": "te_cust_gagal_antar_awal",
+      "gain": 18044.592811584473
+    },
+    {
+      "feature": "te_cour_konfirmasi_alamat",
+      "gain": 17625.304310512543
     }
   ]
 }

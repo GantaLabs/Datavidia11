@@ -1,0 +1,17 @@
+[
+  {
+    "exp_id": "EXP-001",
+    "exp_name": "baseline_calibrated_lgbm",
+    "model_family": "LightGBM",
+    "overall_score": 0.57746,
+    "cv_mean": 0.57745,
+    "verdict": "ACCEPTED",
+    "submission_path": "submissions/EXP-001_baseline_calibrated_lgbm.csv",
+    "reason": "Chief verdict=ACCEPTED (verified reference/improvement)",
+    "sanity": {
+      "row_count": 362245,
+      "has_nulls": false,
+      "is_symmetric": null
+    }
+  }
+]

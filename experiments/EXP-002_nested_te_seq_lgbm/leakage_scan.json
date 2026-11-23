@@ -1,0 +1,10 @@
+{
+  "flags": [
+    {
+      "code": "GROUP_ID_REFERENCE",
+      "severity": "warning",
+      "message": "Group/ID column 'customer_id' is referenced without a clear exclusion list (ensure it is NOT used as a model feature)."
+    }
+  ],
+  "has_critical_leakage": false
+}

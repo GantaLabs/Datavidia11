@@ -1,0 +1,69 @@
+=== EXP-002: Nested TE + Sequential Trajectory + Native Categorical LightGBM ===
+Loaded train Parquet in 7.16s | shape=(1243617, 231)
+Loaded locked CV splits: strategy=stratified, n_folds=5
+Base features: 219 (195 numeric, 24 native categorical)
+Fold 1/5 (118.3s) | best_iter=  52 | val_f1_macro=0.56288 | train_f1_macro=0.56467 | val_logloss=0.88576
+Fold 2/5 (118.6s) | best_iter=  52 | val_f1_macro=0.56199 | train_f1_macro=0.56295 | val_logloss=0.88244
+Fold 3/5 (116.3s) | best_iter=  52 | val_f1_macro=0.56709 | train_f1_macro=0.56342 | val_logloss=0.88150
+Fold 4/5 (116.7s) | best_iter=  52 | val_f1_macro=0.56257 | train_f1_macro=0.56160 | val_logloss=0.88314
+Fold 5/5 (121.1s) | best_iter=  52 | val_f1_macro=0.56511 | train_f1_macro=0.56705 | val_logloss=0.87872
+Loaded & prepared test Parquet in 6.62s | n_test=362245
+
+============================================================
+Overall OOF f1_macro (raw argmax) : 0.56394 (coverage=100.0%)
+Overall OOF multi_logloss         : 0.88231
+CV Fold f1_macro Mean +/- Std     : 0.56393 +/- 0.00190
+Train Fold f1_macro Mean          : 0.56394
+Per-Class OOF F1 (raw argmax):
+  gagal_antar_awal      : 0.40320
+  klaim_hilang          : 0.44515
+  konfirmasi_alamat     : 0.69631
+  normal                : 0.80063
+  retur_pengirim        : 0.46141
+  rusak_perjalanan      : 0.41551
+  tertunda_operasional  : 0.72534
+
+Customer Fold-Overlap Diagnostic:
+  Unseen Customers (n=219,795, 17.7%): f1_macro=0.55125 | logloss=0.90289
+  Repeat Customers (n=1,023,822, 82.3%): f1_macro=0.56639 | logloss=0.87789
+
+Top-25 Feature Importances (Mean Fold Gain):
+   1. cust_address_quality                     236711.77
+   2. cust_complaint_index                     198767.83
+   3. nte_cour_c6                              133994.50
+   4. nte_cust_c2                              118946.29
+   5. nte_cour_c3                              110217.01
+   6. cust_credit_score                         93593.36
+   7. nte_cour_c0                               87501.38
+   8. nte_cust_c4                               60151.56
+   9. nte_cour_c5                               53260.05
+  10. nte_cour_hub_c6                           49300.32
+  11. nte_hub_c6                                43121.53
+  12. cour_courier_score                        39960.39
+  13. scan_quality_mean                         34606.50
+  14. nte_cust_c3                               33380.91
+  15. declared_value                            26259.24
+  16. inv_days_to_pay_max                       25228.72
+  17. jumlah_catatan                            25022.55
+  18. ship_month                                19025.85
+  19. nte_cust_c0                               18605.53
+  20. nte_hub_c1                                17465.78
+  21. nte_seg_hub_c6                            16816.78
+  22. total_time_hours                          16040.37
+  23. seg_durasi_sum                            15403.69
+  24. inv_amount_vs_declared_ratio              13992.59
+  25. nte_seg_hub_c3                            13754.02
+
+OOF vs Test Predicted Class Proportions (TVD=0.00536):
+  Class                  |  OOF Prop | Test Prop | OOF MeanP | Test MeanP
+  gagal_antar_awal       |    0.0761 |    0.0764 |    0.1006 |     0.1017
+  klaim_hilang           |    0.0214 |    0.0212 |    0.0301 |     0.0301
+  konfirmasi_alamat      |    0.2312 |    0.2319 |    0.2174 |     0.2169
+  normal                 |    0.4314 |    0.4280 |    0.3809 |     0.3749
+  retur_pengirim         |    0.0475 |    0.0459 |    0.0690 |     0.0694
+  rusak_perjalanan       |    0.0351 |    0.0348 |    0.0501 |     0.0510
+  tertunda_operasional   |    0.1575 |    0.1617 |    0.1520 |     0.1560
+
+Saved artifacts to D:\Lomba\DATAVIDIA 11.0\experiments\EXP-002_nested_te_seq_lgbm
+Saved submission to D:\Lomba\DATAVIDIA 11.0\submissions\EXP-002_nested_te_seq_lgbm.csv (shape=(362245, 2))
+Total runtime: 660.3s

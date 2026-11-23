@@ -1,0 +1,160 @@
+{
+  "cv_mean": 0.5639303738006409,
+  "cv_std": 0.001902302814275076,
+  "train_mean": 0.5639384618148776,
+  "fold_scores": [
+    0.5628833079962627,
+    0.5619898374714617,
+    0.5670922415061221,
+    0.5625745487133926,
+    0.5651119333159659
+  ],
+  "used_full_train_refit": false,
+  "overall_oof_f1_macro": 0.5639358242202389,
+  "overall_oof_multi_logloss": 0.8823110360651693,
+  "fold_logloss": [
+    0.8857637779876911,
+    0.8824350917991319,
+    0.8814999070701887,
+    0.8831363379025403,
+    0.8787200511856472
+  ],
+  "per_class_f1": {
+    "gagal_antar_awal": 0.4032003945691935,
+    "klaim_hilang": 0.4451501424368374,
+    "konfirmasi_alamat": 0.6963074523687587,
+    "normal": 0.8006273155527921,
+    "retur_pengirim": 0.46141371744729565,
+    "rusak_perjalanan": 0.4155130428191061,
+    "tertunda_operasional": 0.7253387043476892
+  },
+  "best_iterations": [
+    52,
+    52,
+    52,
+    52,
+    52
+  ],
+  "classes": [
+    "gagal_antar_awal",
+    "klaim_hilang",
+    "konfirmasi_alamat",
+    "normal",
+    "retur_pengirim",
+    "rusak_perjalanan",
+    "tertunda_operasional"
+  ],
+  "n_features": 283,
+  "oof_vs_test_tvd": 0.005357090058541212,
+  "customer_overlap_diag": {
+    "unseen_n": 219795,
+    "unseen_f1_macro": 0.5512517044859353,
+    "unseen_logloss": 0.902888671281522,
+    "repeat_n": 1023822,
+    "repeat_f1_macro": 0.5663945063048489,
+    "repeat_logloss": 0.877893411387854
+  },
+  "runtime_seconds": 659.3747038841248,
+  "top25_gain_features": [
+    {
+      "feature": "cust_address_quality",
+      "gain": 236711.77160787582
+    },
+    {
+      "feature": "cust_complaint_index",
+      "gain": 198767.83262243273
+    },
+    {
+      "feature": "nte_cour_c6",
+      "gain": 133994.49611539842
+    },
+    {
+      "feature": "nte_cust_c2",
+      "gain": 118946.29465131758
+    },
+    {
+      "feature": "nte_cour_c3",
+      "gain": 110217.00978279115
+    },
+    {
+      "feature": "cust_credit_score",
+      "gain": 93593.35546340942
+    },
+    {
+      "feature": "nte_cour_c0",
+      "gain": 87501.37731857301
+    },
+    {
+      "feature": "nte_cust_c4",
+      "gain": 60151.55653810501
+    },
+    {
+      "feature": "nte_cour_c5",
+      "gain": 53260.05131788254
+    },
+    {
+      "feature": "nte_cour_hub_c6",
+      "gain": 49300.315330791476
+    },
+    {
+      "feature": "nte_hub_c6",
+      "gain": 43121.52726402283
+    },
+    {
+      "feature": "cour_courier_score",
+      "gain": 39960.3854927063
+    },
+    {
+      "feature": "scan_quality_mean",
+      "gain": 34606.5008105278
+    },
+    {
+      "feature": "nte_cust_c3",
+      "gain": 33380.90867729187
+    },
+    {
+      "feature": "declared_value",
+      "gain": 26259.24054689407
+    },
+    {
+      "feature": "inv_days_to_pay_max",
+      "gain": 25228.720773506164
+    },
+    {
+      "feature": "jumlah_catatan",
+      "gain": 25022.55216226578
+    },
+    {
+      "feature": "ship_month",
+      "gain": 19025.850173187257
+    },
+    {
+      "feature": "nte_cust_c0",
+      "gain": 18605.529855060577
+    },
+    {
+      "feature": "nte_hub_c1",
+      "gain": 17465.78115797043
+    },
+    {
+      "feature": "nte_seg_hub_c6",
+      "gain": 16816.784829616547
+    },
+    {
+      "feature": "total_time_hours",
+      "gain": 16040.368135833742
+    },
+    {
+      "feature": "seg_durasi_sum",
+      "gain": 15403.689527320863
+    },
+    {
+      "feature": "inv_amount_vs_declared_ratio",
+      "gain": 13992.585759162903
+    },
+    {
+      "feature": "nte_seg_hub_c3",
+      "gain": 13754.015366268157
+    }
+  ]
+}

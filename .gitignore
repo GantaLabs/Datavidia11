@@ -1,9 +1,7 @@
 # Data & large artifacts
 data/raw/
-data/processed/*.json
-data/processed/*.parquet
-data/processed/*.csv
-data/processed/*.npy
+data/processed/*
+!data/processed/.gitkeep
 
 # Experiment binary outputs & active SQLite DB
 experiments/**/*.npy

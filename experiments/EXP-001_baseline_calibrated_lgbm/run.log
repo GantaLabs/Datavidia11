@@ -1,4 +1,66 @@
-C:\Users\ASUS\AppData\Local\Programs\Python\Python314\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
-  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+=== EXP-001: Calibrated Log-Loss LightGBM Baseline ===
+Selected 226 features (202 numeric, 24 categorical; excluded 7 columns).
+Loaded locked CV splits: strategy=stratified, n_folds=5
+Loaded train: (1243617, 227) in 71.2s
+Classes (7): ['gagal_antar_awal', 'klaim_hilang', 'konfirmasi_alamat', 'normal', 'retur_pengirim', 'rusak_perjalanan', 'tertunda_operasional']
+Fold 1/5 (122.5s) | val_f1_macro=0.56354 | train_f1_macro=0.56941 | val_logloss=0.88226
+Fold 2/5 (115.5s) | val_f1_macro=0.56436 | train_f1_macro=0.57136 | val_logloss=0.87987
+Fold 3/5 (117.6s) | val_f1_macro=0.56540 | train_f1_macro=0.56851 | val_logloss=0.88522
+Fold 4/5 (114.2s) | val_f1_macro=0.56328 | train_f1_macro=0.56888 | val_logloss=0.88181
+Fold 5/5 (115.4s) | val_f1_macro=0.56490 | train_f1_macro=0.57110 | val_logloss=0.88007
+Loaded test: (362245, 226) in 21.6s
 
-[ERROR] Execution timed out after 900 seconds.
+============================================================
+Overall OOF f1_macro (raw argmax) : 0.56431 (coverage=100.0%)
+Overall OOF multi_logloss         : 0.88185
+CV Fold f1_macro Mean +/- Std     : 0.56430 +/- 0.00080
+Train Fold f1_macro Mean          : 0.56985
+Per-Class OOF F1 (raw argmax):
+  gagal_antar_awal      : 0.39795
+  klaim_hilang          : 0.44648
+  konfirmasi_alamat     : 0.69791
+  normal                : 0.79998
+  retur_pengirim        : 0.46855
+  rusak_perjalanan      : 0.41384
+  tertunda_operasional  : 0.72544
+
+Top-25 Feature Importances (Mean Fold Gain):
+   1. cust_address_quality                     269955.16
+   2. cust_complaint_index                     198574.06
+   3. te_cour_normal                           198485.30
+   4. te_cust_konfirmasi_alamat                174293.96
+   5. te_cour_tertunda_operasional             152017.13
+   6. te_cour_gagal_antar_awal                 107672.56
+   7. cust_credit_score                         99400.28
+   8. te_cust_retur_pengirim                    85394.43
+   9. te_cust_normal                            68497.03
+  10. te_cour_rusak_perjalanan                  64619.08
+  11. te_hub_tertunda_operasional               52493.13
+  12. scan_quality_mean                         38182.82
+  13. declared_value                            32521.76
+  14. cour_courier_score                        29724.08
+  15. te_hub_klaim_hilang                       27744.28
+  16. ship_month                                23890.87
+  17. inv_days_to_pay_max                       23407.79
+  18. te_last_hub_tertunda_operasional          21848.54
+  19. distance_km                               20867.86
+  20. seg_durasi_sum                            20622.97
+  21. te_hub_normal                             20593.99
+  22. inv_amount_vs_declared_ratio              18887.56
+  23. jumlah_catatan                            18561.76
+  24. te_cust_gagal_antar_awal                  18044.59
+  25. te_cour_konfirmasi_alamat                 17625.30
+
+OOF vs Test Predicted Class Proportions & Mean Probabilities:
+  Class                  |  OOF Prop | Test Prop | OOF MeanP | Test MeanP
+  gagal_antar_awal       |    0.0726 |    0.0734 |    0.0999 |     0.1008
+  klaim_hilang           |    0.0212 |    0.0212 |    0.0302 |     0.0302
+  konfirmasi_alamat      |    0.2343 |    0.2340 |    0.2188 |     0.2183
+  normal                 |    0.4347 |    0.4304 |    0.3816 |     0.3760
+  retur_pengirim         |    0.0495 |    0.0489 |    0.0703 |     0.0708
+  rusak_perjalanan       |    0.0343 |    0.0340 |    0.0498 |     0.0506
+  tertunda_operasional   |    0.1534 |    0.1581 |    0.1494 |     0.1534
+
+Saved artifacts to D:\Lomba\DATAVIDIA 11.0\experiments\EXP-001_baseline_calibrated_lgbm
+Saved submission to D:\Lomba\DATAVIDIA 11.0\submissions\EXP-001_baseline_calibrated_lgbm.csv (shape=(362245, 2))
+Total runtime: 736.8s
